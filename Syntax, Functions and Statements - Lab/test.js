@@ -17,7 +17,14 @@ obj.run()
 let stop = {
     name: 'Kras'
 }
+stop.city = obj.city
 stop.stopRun = obj.run;
 stop.stopRun()
+obj.run()
+console.log(stop);
+stop.city = "Varna"
+console.log(stop);
+obj.city = stop.city
+console.log(obj);
 }
 solve()
