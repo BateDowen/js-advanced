@@ -1,3 +1,3 @@
-function subtract() {
+function addItem() {
     console.log('TODO:...');
 }
