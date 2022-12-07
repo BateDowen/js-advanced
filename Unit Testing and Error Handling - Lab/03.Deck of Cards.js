@@ -16,7 +16,6 @@ function printDeckOfCards(cards) {
 
     }
     let card = createCard(face,suit);
-
     arrOfCards.push(card)
   });
   if (isValidCard) {
@@ -44,7 +43,6 @@ function printDeckOfCards(cards) {
         suit: suits[suit],
       }
       return card.face+card.suit
-
     }
   }
 }
