@@ -1,6 +1,26 @@
-.main {
-   width: 500px;
-   height: 500px;
+body{
+   font-family: Consolas;
+   margin: 0;
+}
+
+.game {
+   width: 100vw;
+   height: 100vh;
    background-color: aqua;
 
+}
+.start-screen{
+   text-align: center;
+   font-size: 48px;
+   width: 400px;
+   padding: 20px;
+   background-color: aquamarine;
+   position: absolute;
+   left: 47%;
+   transform: translate(-50%);
+   top: 150px;
+}
+.start-screen:hover{
+   background-color: blue;
+   cursor: pointer;
 }
