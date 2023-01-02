@@ -24,6 +24,12 @@ body{
    background-color: blue;
    cursor: pointer;
 }
+.wizard{
+   position: absolute;
+   background-image: url('/WizardGame/images/wizard.png');
+   background-size: cover;
+  
+}
 .hidden{
    display: none;
 }
