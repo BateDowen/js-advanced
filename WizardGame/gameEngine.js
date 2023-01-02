@@ -5,7 +5,19 @@ function start(state,game) {
 }
 
 function gameLoop(state,game) {
-   console.log(state.keys);
+   //Move wizard
+   const { wizard } = state;
+   const { wizardElement } = game;
+
+   if (state.keys.KeyD) {
+    
+    wizard.posX += 5;
+
+   };
+
+   //Render
+   wizardElement.style.left = wizard.posX + 'px';
+
     window.requestAnimationFrame(gameLoop.bind(null,state,game));
 
 }
