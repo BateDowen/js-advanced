@@ -1,10 +1,10 @@
 function start(state,game) {
     game.createWizard(state.wizard)
-    window.requestAnimationFrame(gameLoop.bind(null,state,game));
+    window.requestAnimationFrame(timeStamp => gameLoop(state,game,timeStamp));
     
 }
 
-function gameLoop(state,game) {
+function gameLoop(state,game,timeStamp) {
    //Move wizard
    const { wizard } = state;
    const { wizardElement } = game;
@@ -12,7 +12,11 @@ function gameLoop(state,game) {
    modifyWizardPos(state,game);
 
    //Spawn bugs
-    game.createBug(state.bugStats)
+   if (timeStamp > state.bugStats.nextSpawmTimeStamp) {
+       game.createBug(state.bugStats);
+       state.bugStats.nextSpawmTimeStamp = timeStamp + Math.random() * state.bugStats.maxSpawmInterval;
+       
+   }
    //Render
    wizardElement.style.left = wizard.posX + 'px';
    wizardElement.style.top = wizard.posY + 'px';

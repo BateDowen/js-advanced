@@ -14,6 +14,9 @@ function initState() {
         bugStats: {
             width: 50,
             height: 50,
+            nextSpawmTimeStamp: 0,
+            maxSpawmInterval: 1500,
+
         },
 
         keys: {}
