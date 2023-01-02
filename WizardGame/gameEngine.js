@@ -16,7 +16,15 @@ function gameLoop(state,game,timeStamp) {
        game.createBug(state.bugStats);
        state.bugStats.nextSpawmTimeStamp = timeStamp + Math.random() * state.bugStats.maxSpawmInterval;
        
-   }
+   };
+
+   // Render bugs
+   document.querySelectorAll('.bug').forEach(bug => {
+    let posX = parseInt(bug.style.left);
+    bug.style.left = posX - state.bugStats.speed + 'px';
+    
+   });
+
    //Render
    wizardElement.style.left = wizard.posX + 'px';
    wizardElement.style.top = wizard.posY + 'px';

@@ -16,6 +16,7 @@ function initState() {
             height: 50,
             nextSpawmTimeStamp: 0,
             maxSpawmInterval: 1500,
+            speed: 9,
 
         },
 
