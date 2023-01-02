@@ -24,8 +24,8 @@ function initGameObjects() {
         createFireball(wizard,fireball){
             const fireballEl = document.createElement('div');
             fireballEl.classList.add('fireball');
-            fireballEl.style.left = wizard.posX + 'px';
-            fireballEl.style.top = wizard.posY + 'px';
+            fireballEl.style.left = wizard.posX + wizard.width + 'px';
+            fireballEl.style.top = wizard.posY + wizard.height / 3 + 'px';
             fireballEl.style.width = fireball.width + 'px';
             fireballEl.style.height = fireball.height + 'px';
 

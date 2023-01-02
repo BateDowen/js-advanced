@@ -18,7 +18,8 @@ function gameLoop(state,game,timeStamp) {
    } else {
     game.wizardElement.style.backgroundImage = 'url("/WizardGame/images/wizard.png")'
 
-   }
+   };
+   
    //Spawn bugs
    if (timeStamp > state.bugStats.nextSpawmTimeStamp) {
        game.createBug(state.bugStats);
@@ -36,6 +37,19 @@ function gameLoop(state,game,timeStamp) {
     }
 
    });
+   //Render fireball
+   document.querySelectorAll('.fireball').forEach(fireball => {
+    let posX = parseInt(fireball.style.left);
+    
+    if (posX > game.gameScreen.offsetWidth) {
+        fireball.remove();
+    } else {
+        fireball.style.left = posX + state.fireball.speed + 'px';
+    }
+
+   });
+
+
 
    //Render
    wizardElement.style.left = wizard.posX + 'px';
