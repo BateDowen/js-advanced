@@ -3,7 +3,7 @@ function initState() {
     let startY = Math.floor(Math.random() * 500);
 
     const state = {
-        
+        gameOver: false,
         wizard: {
             width: 82,
             height: 100,
@@ -15,6 +15,8 @@ function initState() {
             width:20,
             height:20,
             speed: 12,
+            nextSpawmTimeStamp:0,
+            fireRate: 400,
 
         },
         bugStats: {
